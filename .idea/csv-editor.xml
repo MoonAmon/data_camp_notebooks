@@ -24,41 +24,6 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\data_science\data_visualization_pokemon\datasets\Pokemon.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\data_science\data_visualization_pokemon\datasets\poke_legen.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\data_science\data_visualization_pokemon\datasets\poke_legen2.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\data_science\data_visualization_pokemon\datasets\poke_status.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\data_science\data_visualization_pokemon\datasets\poke_status2.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
         <entry key="\poke_status2.csv">
           <value>
             <Attribute>
