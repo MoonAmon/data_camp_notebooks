@@ -24,13 +24,6 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\netflix_data.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
         <entry key="\poke_status2.csv">
           <value>
             <Attribute>
