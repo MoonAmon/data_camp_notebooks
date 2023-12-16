@@ -3,6 +3,8 @@ CREATE DATABASE empresa_db;
     DEFAULT CHARACTER SET = 'utf8mb4';
 USE empresa_db;
 
+-- Questão 1
+
 CREATE TABLE empregado (
     enome VARCHAR(40),
     cpf NUMERIC(11) PRIMARY KEY,
@@ -53,17 +55,22 @@ CREATE TABLE dependentes (
     Foreign Key (emp) REFERENCES empregado(cpf)
 );
 
+-- Questões query
+
+-- Questão 01
 INSERT INTO dependente
 VALUES (1111, 'João', 'M', '1990-01-01', 'Filho');
 
+-- Questão 02
 INSERT INTO projeto
 VALUES ('EDUCACIONAL', 1, 'São Paulo', 1);
 
-
+-- Questão 03
 UPDATE empregado
 SET salario = salario * 2 
 WHERE cpf = 1111;
 
+-- Questão 04
 UPDATE empregado
 SET superv = (
     SELECT gerente
@@ -73,27 +80,46 @@ SET superv = (
 )
 WHERE cpf = 56789;
 
+-- Questão 05
 DELETE FROM dependentes
 WHERE nomedepend = 'JOAOZINHO' AND parentesco = 'SOBRINHO' AND emp = 12345;
 
+-- Questão 06
 SELECT pnome, plocal
 FROM projeto;
 
+-- Questão 07
 SELECT E.nome AS empregado_nome, E.salario AS empregado_salario,
         S.nome AS supervisor_nome, S.salario AS supervisor_salario
 FROM empregado AS E
 INNER JOIN empregado AS S ON E.superv = S.cpf
 WHERE E.salario > S.salario;
 
+-- Questão 08
 SELECT gerente
 FROM departamento;
 
+-- Questão 09
 SELECT cpf
 FROM empregado
 WHERE NOT cpf = trabalha_no.emp;
 
+-- Questão 10
 SELECT E.nome AS empregado_nome, P.pnome AS projeto_nome, T.horas AS horas_trabalhadas
 FROM empregado AS E 
 INNER JOIN trabalha_no AS T ON E.cpf = T.emp
 INNER JOIN projeto AS P ON T.proj = P.pnum;
 
+-- Questão 11
+SELECT P.pnome AS nome_projeto
+FROM empregado AS E
+LEFT JOIN trabalha_no AS T ON E.cpf = T.emp
+LEFT JOIN projeto AS P ON T.proj = P.pnum OR E.dno = P.dnum
+LEFT JOIN departamento AS D ON E.cpf = D.gerente
+WHERE E.nome = 'JOAO SILVA';
+
+-- Questão 12
+SELECT nomedepend, sexo, nome.Resp AS nome_responsavel, cpf.Resp AS cpf_responsavel
+FROM dependentes AS Dep
+RIGHT JOIN empregado AS Resp ON Dep.emp = Resp.cpf
+ORDER BY nomedepend ASC;
