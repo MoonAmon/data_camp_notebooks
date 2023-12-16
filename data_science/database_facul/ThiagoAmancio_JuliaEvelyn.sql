@@ -63,7 +63,7 @@ VALUES (1111, 'João', 'M', '1990-01-01', 'Filho');
 
 -- Questão 02
 INSERT INTO projeto
-VALUES ('EDUCACIONAL', 1, 'São Paulo', 1);
+VALUES ('EDUCACIONAL', 1, 'São Paulo', 3);
 
 -- Questão 03
 UPDATE empregado
