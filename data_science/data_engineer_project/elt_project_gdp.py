@@ -29,7 +29,6 @@ def extract(url, table_attribs):
 
     return df
 
-
 def transform(df):
     """ This function converts the GDP information from Currency
     format to float value, transforms the information. Function returns a dataframe"""

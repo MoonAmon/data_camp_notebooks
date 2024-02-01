@@ -33,5 +33,17 @@
       <jdbc-url>jdbc:sqlite:C:\Users\USER\Desktop\repos_git\data_camp_notebooks\data_science\data_engineer_project\World_Economies.db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="Banks" uuid="5b8df81d-486b-46c2-b8f6-136bf598b227">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\USER\Desktop\repos_git\data_camp_notebooks\data_science\data_engineer_project_final\Banks.db</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+      <libraries>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.43.0/org/xerial/sqlite-jdbc/3.43.0.0/sqlite-jdbc-3.43.0.0.jar</url>
+        </library>
+      </libraries>
+    </data-source>
   </component>
 </project>
